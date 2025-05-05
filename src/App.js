@@ -28,10 +28,10 @@ function App() {
 
       </Route>
 
-      <Route path='/admin' element={<AdminMaster/>}>
+      {/* <Route path='/admin' element={<AdminMaster/>}>
       
       <Route path='/admin/specialization' element={<Specialization/>}/>
-      </Route>
+      </Route> */}
 
     </Routes>
     
