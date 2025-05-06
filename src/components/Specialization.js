@@ -4,7 +4,6 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// ToastContainer
 function Specialization() {
   const [specialization, setspecialization] = useState("");
 
