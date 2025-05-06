@@ -18,7 +18,7 @@ function UpdateSpecialization() {
       let data={
           _id:id
       }
-      axios.post('http://localhost:3000/api/specialization/singleGetSpecialization',data)
+      axios.post('http://localhost:1000/api/specialization/singleGetSpecialization',data)
       .then((res)=>{
               console.log(res.data)
               setspecialization(res.data.data.specializationName)
@@ -32,7 +32,7 @@ function UpdateSpecialization() {
       _id:id,
       specializationName:specialization
     }
-    axios.post("http://localhost:3000/api/specialization/update",data)
+    axios.post("http://localhost:1000/api/specialization/update",data)
     .then(res=>{
       if(res.data.success == true){
         nav('/admin/updatespecialization')

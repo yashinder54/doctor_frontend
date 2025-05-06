@@ -17,7 +17,7 @@ function Specialization() {
     let data={
       specializationName:specialization
     }
-    axios.post("http://localhost:3000/api/specialization/add",data)
+    axios.post("http://localhost:1000/api/specialization/add",data)
     .then(res=>{
       if(res.data.success){
         toast.success(res.data.message)

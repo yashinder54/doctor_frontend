@@ -10,7 +10,7 @@ function ViewSpecialist() {
    
     useEffect(() => {
 
-        axios.post("http://localhost:3000/api/specialization/getAll")
+        axios.post("http://localhost:1000/api/specialization/getAll")
   
             .then((res) => {
                 setData(res.data.data)
@@ -23,7 +23,7 @@ function ViewSpecialist() {
         let data = {
             _id: id,
         }
-        axios.post("http://localhost:3000/api/specialization/delete", data)
+        axios.post("http://localhost:1000/api/specialization/delete", data)
        
             .then((res => {
                 if (res.data.success == true) {

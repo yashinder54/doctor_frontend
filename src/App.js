@@ -12,6 +12,7 @@ import AdminMaster from './components/AdminMaster'
 import Specialization from './components/Specialization'
 import ViewSpecialist from './components/ViewSpecialist'
 import UpdateSpecialization from './components/UpdateSpecialization'
+import AddDoctor from './components/AddDoctor'
 // Bounce
 
 function App() {
@@ -31,10 +32,11 @@ function App() {
       </Route>
 
       <Route path='/admin' element={<AdminMaster/>}>
-      
       <Route path='/admin/addspecialization' element={<Specialization/>}/>
       <Route path='/admin/viewspecialization' element={<ViewSpecialist/>}/>
       <Route path='/admin/updatespecialization/:id' element={<UpdateSpecialization/>}/>
+      <Route path='/admin/doctor' element={<AddDoctor/>}/>
+
 
 
       </Route>
