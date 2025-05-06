@@ -10,6 +10,8 @@ import Treatment from './components/Treatment'
 import { Bounce, ToastContainer } from 'react-toastify'
 import AdminMaster from './components/AdminMaster'
 import Specialization from './components/Specialization'
+import ViewSpecialist from './components/ViewSpecialist'
+import UpdateSpecialization from './components/UpdateSpecialization'
 // Bounce
 
 function App() {
@@ -28,10 +30,14 @@ function App() {
 
       </Route>
 
-      {/* <Route path='/admin' element={<AdminMaster/>}>
+      <Route path='/admin' element={<AdminMaster/>}>
       
-      <Route path='/admin/specialization' element={<Specialization/>}/>
-      </Route> */}
+      <Route path='/admin/addspecialization' element={<Specialization/>}/>
+      <Route path='/admin/viewspecialization' element={<ViewSpecialist/>}/>
+      <Route path='/admin/updatespecialization/:id' element={<UpdateSpecialization/>}/>
+
+
+      </Route>
 
     </Routes>
     

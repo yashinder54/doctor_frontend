@@ -863,7 +863,7 @@ function Home() {
             <div className="map_main">
               <div className="map-responsive">
                 <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                  src="https://maps.app.goo.gl/pMSn87pxjZKPMJB37"
                   width={600}
                   height={600}
                   frameBorder={0}

@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useState } from "react";
 import { toast } from "react-toastify";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,11 +14,12 @@ function Login() {
   const changePassword = (e) => {
     setPassword(e.target.value);
   };
-  // const nav = useNavigate();
+  const nav = useNavigate();
   const handleForm = (e) => {
     e.preventDefault()
     if (email == "admin@gmail.com" && password == "123") {
       console.log("valid user");
+      nav("/admin/addspecialization")
       toast.success("login succesfully!!");
     } else {
       console.log("invalid user");

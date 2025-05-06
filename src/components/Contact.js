@@ -49,7 +49,8 @@ function Contact() {
             <div className="map_main">
               <div className="map-responsive">
                 <iframe
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                  // src="https://maps.app.goo.gl/vbxLoDZU9WRALTSu8"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664020.6397147363!2d74.09122453821446!3d31.02010591112654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa569e7355%3A0x8fbd263103a38861!2sPunjab!5e1!3m2!1sen!2sin!4v1746515432112!5m2!1sen!2sin"
                   width={600}
                   height={600}
                   frameBorder={0}
