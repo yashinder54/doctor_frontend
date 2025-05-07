@@ -45,7 +45,7 @@ export default function Navbar() {
                 Specialization
               </a>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to={'/admin/addspecialization'}>Add</Link></li>
+                <li><Link className="dropdown-item" to={'/admin/addspecialization'}>hello</Link></li>
                 <li><Link className="dropdown-item" to={'/admin/viewspecialization'}>View</Link></li>
               </ul>
             </li>
