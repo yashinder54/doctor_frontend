@@ -14,9 +14,7 @@ function AddDoctor() {
   const [specializationIdData, setSpecializationData] = useState([])
 
   useEffect(() => {
-    // let data = {
-    // }
-    //  axios.post("http://localhost:4000/api/specialization/getall")
+ 
     axios.post("http://localhost:1000/api/specialization/getAll")
       .then((res) => {
         console.log(res.data)
@@ -24,6 +22,7 @@ function AddDoctor() {
       })
   }, [])
 
+  
   const nav = useNavigate()
   const handleForm = ((e) => {
 
@@ -76,7 +75,7 @@ function AddDoctor() {
   return (
     <>
       <section className="d-flex align-items-center justify-content-center vh-100 bg-light my-5">
-        <div className="card shadow-lg p-4 w-100" style={{ maxWidth: "400px" }}>
+        <div className="card shadow-lg p-4 w-100" style={{ maxWidth: "700px" }}>
           <h2 className="text-center mb-4">Doctor Registration</h2>
           <form onSubmit={handleForm}>
             <div className="form-group">
@@ -146,10 +145,10 @@ function AddDoctor() {
             </div>
             <button className="btn btn-primary btn-block">Register</button>
           </form>
-          <p className="text-center mt-3">
+          {/* <p className="text-center mt-3">
             Already have an account?
             <Link to="/doctor" className="text-primary"> Login</Link>
-          </p>
+          </p> */}
         </div>
       </section>
     </>

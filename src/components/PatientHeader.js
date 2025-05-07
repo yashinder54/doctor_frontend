@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; // Only if you're using React Router
 import React from 'react';
-export default function Navbar() {
+export default function PatientHeader() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -26,44 +26,34 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">Features</Link>
+              <Link className="nav-link" to={'/user/viewspecialist'}>Specialization</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">Pricing</Link>
+              <Link className="nav-link" to={'/user/viewbook'}>Booking</Link>
+            </li>
+            
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Schedule
+              </a>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" to={'/user/viewschedule'}>view</Link></li>
+                {/* <li><Link className="dropdown-item" to={'/admin/viewspecialization'}>View</Link></li> */}
+              </ul>
+
+              
             </li>
 
-            
-         
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Specialization
-              </a>
-              <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to={'/admin/addspecialization'}>Add</Link></li>
-                <li><Link className="dropdown-item" to={'/admin/viewspecialization'}>View</Link></li>
-              </ul>
+ <li className="nav-item">
+              <Link className="nav-link" to={'/login'}>Logout</Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Doctor
-              </a>
-              <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to={'/admin/doctor'}>Add</Link></li>
-                <li><Link className="dropdown-item" to={'/admin/viewdoctor'}>View</Link></li>
-              </ul>
-            </li>
+
           </ul>
         </div>
       </div>

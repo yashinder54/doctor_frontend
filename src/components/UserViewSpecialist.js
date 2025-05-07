@@ -3,10 +3,9 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 
-function ViewSpecialist() {
+function UserViewSpecialist() {
     const [data, setData] = useState([])
-    const [isDelete,setIsDelete]=useState(false)
-
+  
    
     useEffect(() => {
 
@@ -18,26 +17,8 @@ function ViewSpecialist() {
             .catch((err) => {
                 console.log(err)
             })
-    }, [isDelete])
-    const deleteData = (id) => {
-        let data = {
-            _id: id,
-        }
-        axios.post("http://localhost:1000/api/specialization/delete", data)
-       
-            .then((res => {
-                if (res.data.success == true) {
-                    toast.success(res.data.message)
-                    setIsDelete(true)
-                } else {
-                    toast.error(res.data.message)
-                }
-            }))
-            .catch((err) => {
-                console.log(err)
-            })
-        setIsDelete(false)
-    }
+    }, [])
+  
     const customStyles = {
         content: {
             width: '50%',
@@ -85,9 +66,7 @@ function ViewSpecialist() {
                         <tr>
                             <th>S no.</th>
                             <th>Specialization Name</th>
-                            {/* <th>View</th> */}
-                            <th>Edit</th>
-                            {/* <th>Delete</th> */}
+                       
                         </tr>
 
                         {
@@ -96,11 +75,7 @@ function ViewSpecialist() {
                                     <tr>
                                         <td>{index + 1}</td>
                                         <td>{el.specializationName}</td>
-                                        {/* <td>
-                                            <Link to={"/singleview/" + el._id}><i className="bi bi-eye btn btn-outline-primary"></i></Link>
-                                        </td> */}
-                                        <td><Link to={'/admin/updatespecialization/' + el._id}><i className="bi bi-pen btn btn-outline-success "></i></Link> </td>
-                                        <td><button className="btn btn-outline-danger" onClick={() => { deleteData(el._id); }}><i className="bi bi-trash"></i></button></td>
+
                                     </tr>
                                 )
                             })
@@ -115,4 +90,4 @@ function ViewSpecialist() {
         </>
     )
 }
-export default ViewSpecialist
+export default UserViewSpecialist

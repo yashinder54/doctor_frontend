@@ -3,14 +3,14 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 
-function ViewSpecialist() {
+function ViewDoctor() {
     const [data, setData] = useState([])
     const [isDelete,setIsDelete]=useState(false)
 
    
     useEffect(() => {
 
-        axios.post("http://localhost:1000/api/specialization/getAll")
+        axios.post("http://localhost:1000/api/doctor/getAllDoctor")
   
             .then((res) => {
                 setData(res.data.data)
@@ -23,7 +23,7 @@ function ViewSpecialist() {
         let data = {
             _id: id,
         }
-        axios.post("http://localhost:1000/api/specialization/delete", data)
+        axios.post("http://localhost:1000/api/doctor/deleteDoctor", data)
        
             .then((res => {
                 if (res.data.success == true) {
@@ -84,10 +84,14 @@ function ViewSpecialist() {
                     <tbody>
                         <tr>
                             <th>S no.</th>
-                            <th>Specialization Name</th>
+                            <th>Doctor Name</th>
+                            <th>Specialization</th>
+
+                            <th>Contact</th>
+
                             {/* <th>View</th> */}
-                            <th>Edit</th>
-                            {/* <th>Delete</th> */}
+                            {/* <th>Edit</th> */}
+                            <th>Delete</th>
                         </tr>
 
                         {
@@ -95,11 +99,16 @@ function ViewSpecialist() {
                                 return (
                                     <tr>
                                         <td>{index + 1}</td>
-                                        <td>{el.specializationName}</td>
+                                        <td>{el.name}</td>
+                                        <td>{el.specializationId?.specializationName}</td>
+
+                                        
+                                        <td>{el.contact}</td>
+
                                         {/* <td>
                                             <Link to={"/singleview/" + el._id}><i className="bi bi-eye btn btn-outline-primary"></i></Link>
                                         </td> */}
-                                        <td><Link to={'/admin/updatespecialization/' + el._id}><i className="bi bi-pen btn btn-outline-success "></i></Link> </td>
+                                        {/* <td><Link to={'/admin/updatespecialization/' + el._id}><i className="bi bi-pen btn btn-outline-success "></i></Link> </td> */}
                                         <td><button className="btn btn-outline-danger" onClick={() => { deleteData(el._id); }}><i className="bi bi-trash"></i></button></td>
                                     </tr>
                                 )
@@ -110,9 +119,7 @@ function ViewSpecialist() {
                 </table>
             </div>
             
-     
-
         </>
     )
 }
-export default ViewSpecialist
+export default ViewDoctor

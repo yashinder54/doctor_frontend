@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,15 +18,40 @@ function Login() {
   const nav = useNavigate();
   const handleForm = (e) => {
     e.preventDefault()
-    if (email == "admin@gmail.com" && password == "123") {
-      console.log("valid user");
-      nav("/admin/addspecialization")
-      toast.success("login succesfully!!");
-    } else {
-      console.log("invalid user");
-      toast.error("invalid user");
-      //error , warning, sucess info
+    let data={
+      email:email,
+      password:password
     }
+    axios.post('http://localhost:1000/api/user/login',data)
+    .then((res)=>{
+      console.log(res.data)
+      if(res.data.success==true){
+        toast.success(res.data.message)
+        sessionStorage.setItem("userData",JSON.stringify(res.data.data))
+        sessionStorage.setItem("userId",res.data.data._id)
+        sessionStorage.setItem("token",res.data.token)
+        localStorage.setItem("token",res.data.token)
+        if(res.data.data.userType == 1){
+          
+          nav("/admin")
+          
+        }
+        else if(res.data.data.userType == 2){
+          nav("/user/viewschedule")
+
+        }
+        else if(res.data.data.userType == 3){
+          nav("/doctor/schedule")
+
+        }
+        else{
+          toast.error("You are not allowd to access this page")
+        }
+
+      }
+    }).catch((err)=>{
+      console.log(err);
+    })
   };
   return (
     <>

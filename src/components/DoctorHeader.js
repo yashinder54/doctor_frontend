@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; // Only if you're using React Router
 import React from 'react';
-export default function Navbar() {
+export default function DoctorHeader() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -25,11 +25,9 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
+        
             <li className="nav-item">
-              <Link className="nav-link" to="#">Features</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="#">Pricing</Link>
+              <Link className="nav-link" to={'/doctor/viewbook'}>Booking</Link>
             </li>
 
             <li className="nav-item dropdown">
@@ -40,12 +38,16 @@ export default function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Specialization
+                Schedule
               </a>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to={'/admin/addspecialization'}>Add</Link></li>
-                <li><Link className="dropdown-item" to={'/admin/viewspecialization'}>View</Link></li>
+                <li><Link className="dropdown-item" to={'/doctor/schedule'}>Add</Link></li>
+                <li><Link className="dropdown-item" to={'/doctor/viewschedule'}>View</Link></li>
               </ul>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to={'/login'}>Logout</Link>
             </li>
 
 
