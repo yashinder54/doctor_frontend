@@ -57,7 +57,7 @@ function ViewDoctor() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="/assets/logo/ctbanner.png"
+              src="/assets/images/medium.jpg"
               className="card-img-bottom"
               alt="..."
               style={{ minHeight: "350px" }}

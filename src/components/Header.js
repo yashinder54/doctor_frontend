@@ -96,9 +96,9 @@ export default function Header(){
             <li>
             <Link to="/doctor" >Doctors</Link>
             </li>
-            <li>
+            {/* <li>
             <Link to="/blog" >Blog</Link>
-            </li>
+            </li> */}
             <li>
             <Link to="/contact" >Contact</Link>
             </li>
