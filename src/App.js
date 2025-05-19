@@ -55,8 +55,6 @@ function App() {
       <Route path='/doctor/viewschedule' element={<ViewSchedule/>}/>
       <Route path='/doctor/viewbook' element={<ViewBook/>}/>
 
-
-      
       </Route>
 
             
@@ -66,10 +64,6 @@ function App() {
       <Route path='/user/viewbook' element={<UserViewBook/>}/>
       <Route path='/user/viewspecialist' element={<UserViewSpecialist/>}/>
 
-
-
-
-      
       </Route>
 
     </Routes>

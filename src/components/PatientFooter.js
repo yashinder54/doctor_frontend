@@ -4,7 +4,7 @@ export default function PatientFooter(){
 
 <div className="footer_section">
     <div className="container">
-      <div className="input_bt">
+      {/* <div className="input_bt">
         <input
           type="text"
           className="mail_bt"
@@ -14,7 +14,7 @@ export default function PatientFooter(){
         <span className="subscribe_bt" id="basic-addon2">
           <a href="#">Subscribe</a>
         </span>
-      </div>
+      </div> */}
       <div className="footer_section_2">
         <div className="row">
           <div className="col-lg-3 col-sm-6">
@@ -50,11 +50,11 @@ export default function PatientFooter(){
                     <i className="fa fa-facebook" aria-hidden="true" />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">
                     <i className="fa fa-twitter" aria-hidden="true" />
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#">
                     <i className="fa fa-linkedin" aria-hidden="true" />
