@@ -42,7 +42,7 @@ export default function Header(){
   {/* header section start */}
   <div className="header_section">
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="">
         <a className="navbar-brand" href="index.html">
           <img src="assets/images/logo.png" />
         </a>
@@ -71,9 +71,9 @@ export default function Header(){
             <li className="nav-item">
             <Link to="/doctor" className="nav-link">Doctors</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <Link to="/blog" className="nav-link">Blog</Link>
-            </li>
+            </li> */}
             <li className="nav-item">
             <Link to="/contact" className="nav-link">Contact</Link>
             </li>
