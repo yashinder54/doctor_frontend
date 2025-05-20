@@ -53,21 +53,15 @@ function ViewDoctor() {
 
     return (
         <>
-  <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="/assets/images/medium.jpg"
-              className="card-img-bottom"
-              alt="..."
-              style={{ minHeight: "350px" }}
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h1 style={{ marginBottom: "90px", fontFamily: "fantasy" }}>View Specialization<br/><Link to={"/adminmaster/dashboard"} className="nav-link" style={{fontSize:"15px",marginLeft:"-20px"}}>HOME/DEPARTMENT</Link> </h1>
-            </div>
-          </div>
-        </div>
-      </div>
+        
+<div id="carouselExampleFade" className="carousel slide carousel-fade">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="/assets/images/medium.jpg" className="" alt="" />
+    </div>
+  </div>
+</div>
+
             <div className="container table-responsive" style={{ overflow: "hidden" }}>
                 <div className="row text-center">
                     <div className="col-md-4"></div>

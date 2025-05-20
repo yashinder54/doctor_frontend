@@ -103,11 +103,11 @@ export default function AdminFooter(){
           <div className="col-lg-3 col-sm-6">
             <h3 className="footer_taital">News</h3>
             <div className="dryfood_text">
-              <img src="assets/images/img-4.png" />
+              <img src="/assets/images/img-4.png" />
               <span className="padding_15">Normal distribution</span>
             </div>
             <div className="dryfood_text">
-              <img src="assets/images/img-5.png" />
+              <img src="/assets/images/img-5.png" />
               <span className="padding_15">Normal distribution</span>
             </div>
           </div>
