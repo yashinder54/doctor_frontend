@@ -85,22 +85,22 @@ export default function Header(){
         <div className="custom_menu">
           <ul>
             <li className="active">
-            <Link to="/" >Home</Link>
+            <Link to="/home" >Home</Link>
+            </li>
+            <li>
+            <Link to="/doctor" >Doctor</Link>
             </li>
             <li>
             <Link to="/about" >About</Link>
             </li>
             <li>
-            <Link to="/login" >Login</Link>
-            </li>
-            <li>
-            <Link to="/doctor" >Doctors</Link>
+            <Link to="/contact" >Contact</Link>
             </li>
             {/* <li>
             <Link to="/blog" >Blog</Link>
             </li> */}
             <li>
-            <Link to="/contact" >Contact</Link>
+            <Link to="/login" >Login</Link>
             </li>
           </ul>
         </div>
