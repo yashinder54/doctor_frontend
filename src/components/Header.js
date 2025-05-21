@@ -103,23 +103,7 @@ export default function Header(){
             <Link to="/contact" >Contact</Link>
             </li>
           </ul>
-
         </div>
-        {/* <form className="form-inline my-2 my-lg-0">
-          <div className="search_btn">
-            <li>
-            <Link to="/login" >Login</Link>
-            </li>
-            <li>
-            <Link to="/register" >Register</Link>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-search" aria-hidden="true" />
-              </a>
-            </li>
-          </div>
-        </form> */}
       </div>
     </div>
   </div>
